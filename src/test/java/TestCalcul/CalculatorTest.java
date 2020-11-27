@@ -11,6 +11,7 @@ public class CalculatorTest {
 
     // create a setUp() method to init
     Calculator calculator;
+
     @Before
     public void setUp() throws Exception {
         calculator = new Calculator();
@@ -41,36 +42,30 @@ public class CalculatorTest {
     // AJOUTER LA METHODE DE TEST SUR MULTIPLY
 
     @Test
-    public void testMultiply(){
-        Assert.assertEquals(12, calculator.multiply(3,4));
+    public void testMultiply() {
+        Assert.assertEquals(12, calculator.multiply(3, 4));
     }
 
     /*AJOUTER LA METHODE DE TEST SUR TestMin()
     en utilisant Assert.fail()*/
     @Test
-    public void testMin(){
-        int min = calculator.min(10,20);
+    public void testMin() {
+        int min = calculator.min(10, 20);
         if (min != 10) Assert.fail();
     }
 
 
     @Test
-    public void testMax(){
+    public void testMax() {
         int max = calculator.max(2000, -2000);
-        Assert.assertEquals(2000,max);
+        //Assert.assertEquals(2000,max);
+        if (max != 2000) Assert.fail();
     }
+
     @Test
-    public void testMinElement()
-    {
-        int tab[]={3,4,8,1,9};
-        int m=calculator.minElement(tab);
-        Assert.assertEquals(1,m);
-    }
-    @Test
-    public void testMaxElement()
-    {
-        int tab[]={3,4,8,1,9,0};
-        int m=calculator.maxElement(tab);
-        Assert.assertEquals(9,m);
+    public void testMinElement() {
+        int tab[] = {3, 4, 8, 1, 9};
+        int m = calculator.minElement(tab);
+        Assert.assertEquals(1, m);
     }
 }
