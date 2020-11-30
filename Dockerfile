@@ -1,4 +1,4 @@
-FROM openjdk:12-jdk-alpine
+FROM openjdk:8
 
 ARG JAR_FILE=target/projet1-1.0-SNAPSHOT.jar
 ARG JAR_LIB_FILE=target/lib/
